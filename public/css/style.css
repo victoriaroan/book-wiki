@@ -1,3 +1,16 @@
+/* Colors
+--------------------------------------
+c1cc00 (193, 204, 0)
+94993d (148, 153, 61)
+ffd000 (255, 208, 0)
+739aff (115, 154, 255)
+2f84cc (47, 132, 204)
+--------------------------------------*/
+
+/* Fonts
+--------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic);
+
 /* HTML Tags
 --------------------------------------*/
 html {
@@ -7,6 +20,7 @@ html {
 
 body {
     margin-bottom: 60px; /* footer height */
+    font-family: Roboto;
 }
 
 code {
@@ -21,6 +35,20 @@ body > .container-fluid {
 
 /* Header/Footer
 --------------------------------------*/
+.navbar {
+    background-color: #c1cc00;
+    border-color: #94993d;
+}
+
+.navbar-brand {
+    color: #333 !important;
+    font-weight: bold;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #94993d;
+    color: #fff;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -42,12 +70,11 @@ body > .container-fluid {
     color: #eee;
 }
 
-.page-header h2 {
+.page-header h3,h2 {
     margin: 0;
 }
 
 .page-header .pull-right {
-    margin-top: 3px;
 }
 
 .page-header .btn {
@@ -69,6 +96,7 @@ body > .container-fluid {
 /* Pages
 --------------------------------------*/
 .page-edit {
+    position: relative;
     padding: 15px;
     padding-top: 0;
     background-color: #eee;
@@ -82,5 +110,10 @@ body > .container-fluid {
         left: 0;
         display: block;
         border-right: 1px solid #999;
+    }
+    
+    .page-edit textarea {
+        margin-top: 10px;
+        height: 80%;
     }
 }
