@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Project Name | book-wiki</title>
+        <title>Dashboard | book-wiki</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     
@@ -20,21 +21,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Project Name</a>
+                    <a class="navbar-brand" href="#">book-wiki</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="">Book One</a></li>
-                        <li class="active dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Book Two <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="">Page 1</a></li>
-                                <li><a href="">Page 2</a></li>
-                                <li><a href="">Page 3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="">username</a></li>
                     </ul>
@@ -46,18 +35,56 @@
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1 page-view">
                     <div class="page-header">
-                        <div class="pull-right">
-                            <a class="btn btn-default btn-sm">History</a>
-                            <a class="btn btn-default btn-sm" href="edit.html">Edit</a>
-                        </div>
-                        <h3>Book Two</h3>
+                        <h3>Dashboard</h3>
                     </div>
-                    <h1>book-wiki</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida viverra massa, nec commodo tortor auctor eu. Nullam at lacus eget eros auctor pellentesque. Vivamus et enim et erat consequat euismod vitae sit amet tellus. Vestibulum tristique sapien et ullamcorper cursus. Nam at odio eu metus dignissim semper.</p>
-                    <p>Quisque a gravida magna. Cras vitae ex lacus. Integer metus felis, ornare a quam eu, dignissim suscipit enim. Sed eget maximus velit, non auctor tellus. Quisque dictum pretium ante vel bibendum. Ut sit amet arcu egestas, mollis mauris in, hendrerit neque. Vivamus nec tellus fermentum, tincidunt ligula in, dignissim nulla. Sed sed sapien dignissim, convallis nunc nec, fermentum nunc. Nullam nec velit vel nisi malesuada tempor.</p>
-                    <p>Suspendisse <strong>potenti</strong>. Proin nec enim neque. Proin cursus felis eget justo pharetra, ac tincidunt ligula posuere. Fusce vitae eros ex. Nullam sollicitudin consectetur suscipit. Ut non ante dui. Sed iaculis purus non tortor ultrices malesuada. Fusce et fringilla metus. Etiam lobortis malesuada eros at pulvinar.</p>
-                    <p>Donec urna massa, dapibus vitae lacus id, elementum ornare quam. Nulla ac ultrices eros. Pellentesque rhoncus efficitur magna, volutpat aliquam est porta vel. Proin sed imperdiet urna. Quisque at eros ligula. Sed blandit leo ac nulla dapibus interdum. Sed ut blandit ex.</p>
-                    <p>Donec at quam quis nisi consectetur condimentum. Donec pretium, est sed convallis laoreet, risus lorem commodo risus, quis consectetur ipsum odio at ligula. Ut fermentum iaculis enim a scelerisque. Proin aliquet risus a condimentum suscipit. Nulla eget augue dapibus, iaculis tortor vitae, interdum mauris. Suspendisse gravida risus sit amet nunc tristique consequat. Integer risus ex, iaculis luctus tristique eget, lacinia in ipsum. Duis volutpat, diam nec bibendum sollicitudin, nunc dui condimentum elit, non bibendum mi ante iaculis tortor. Morbi eget accumsan justo. Sed maximus placerat convallis. Nulla accumsan scelerisque luctus. Vestibulum pellentesque magna vel sagittis aliquet. Quisque semper orci vitae tortor semper interdum. Integer enim diam, aliquet vel euismod maximus, ullamcorper nec dui.</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="project-box panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="pull-right">
+                                        <a href="project-settings.html" class="btn btn-default btn-sm"><span class="fa fa-cog" aria-hidden="true"></span><span class="sr-only">Settings</span></a>
+                                    </div>
+                                    <h2><a href="project-index.html">Project A</a></h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p>Aliquam ac velit lorem. Vestibulum aliquet dolor sapien, sit amet efficitur risus commodo quis. Vestibulum ac dolor at odio consequat vestibulum. Mauris et consectetur erat, vitae varius nibh.</p>
+                                    <strong>Owner:</strong> <a href="user-index.html">username</a><br>
+                                    <strong>Contributors:</strong> 3<br>
+                                    <strong>Latest Update:</strong><br>
+                                    <div class="activity-entry">
+                                        <div class="time">01/18/2016<br>3:50pm</div>
+                                        <div class="entry">
+                                            <span class="fa fa-pencil-square" aria-hidden="true"></span>
+                                            username <strong>edited</strong> <a href="page-view.html">This is a reeeeeeally loooooong page naaaaaaame</a> in <a href="book-index.html">Book Two</a>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="project-box panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="pull-right">
+                                        <a href="project-settings.html" class="btn btn-default btn-sm"><span class="fa fa-cog" aria-hidden="true"></span><span class="sr-only">Settings</span></a>
+                                    </div>
+                                    <h2><a href="project-index.html">Project B</a></h2>
+                                </div>
+                                <div class="panel-body">
+                                    <p>Aliquam ac velit lorem. Vestibulum aliquet dolor sapien, sit amet efficitur risus commodo quis. Vestibulum ac dolor at odio consequat vestibulum. Mauris et consectetur erat, vitae varius nibh.</p>
+                                    <strong>Owner:</strong> <a href="user-index.html">username</a><br>
+                                    <strong>Contributors:</strong> 3<br>
+                                    <strong>Latest Update:</strong><br>
+                                    <div class="activity-entry">
+                                        <div class="time">01/18/2016<br>4:31pm</div>
+                                        <div class="entry">
+                                            <span class="fa fa-plus-square" aria-hidden="true"></span>
+                                            username <strong>created</strong> <a href="project-index.html">Project B</a>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

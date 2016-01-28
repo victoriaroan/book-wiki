@@ -153,3 +153,28 @@ body > .container-fluid {
         padding-top: 68px;
     }
 }
+
+/* Activity
+--------------------------------------*/
+.activity-entry {
+    margin: 5px 0 5px 10px;
+}
+
+.activity-entry .fa {
+    display: block;
+    float: left;
+    margin-top: 2px;
+    width: 20px;
+}
+
+.activity-entry .time {
+    color: #777;
+    float: left;
+    width: 50px;
+    text-align: right;
+    font-size: 75%;
+}
+
+.activity-entry .entry {
+    margin-left: 70px;
+}
