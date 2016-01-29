@@ -58,22 +58,57 @@
         </nav>
         
         <div class="container-fluid">
+            <div class="page-header">
+                <div class="pull-right">
+                    <a class="btn btn-default btn-sm" href="project-settings.html"><span class="fa fa-cog"></span><span class="hidden-xs"> Settings</span></a>
+                    <a class="btn btn-default btn-sm" href="page-edit.html"><span class="fa fa-pencil"></span><span class="hidden-xs"> Edit</span></a>
+                    <a class="btn btn-default btn-sm" href="project-index.html"><span class="fa fa-eye"></span><span class="hidden-xs"> View</span></a>
+                </div>
+                <h3>History <small>Project A</small></h3>
+            </div>
+
             <div class="row">
-                <div class="col-sm-10 col-sm-offset-1 page-view">
-                    <div class="page-header">
-                        <div class="pull-right">
-                            <a class="btn btn-default btn-sm" href="project-settings.html"><span class="fa fa-cog"></span><span class="hidden-xs"> Settings</span></a>
-                            <a class="btn btn-default btn-sm" href="project-history.html"><span class="fa fa-map-o"></span><span class="hidden-xs"> History</span></a>
-                            <a class="btn btn-default btn-sm" href="page-edit.html"><span class="fa fa-pencil"></span><span class="hidden-xs"> Edit</span></a>
+                <div class="col-sm-2 history-options">
+                    <div class="form-group">
+                        <label for="doc_type">Include Activity For All:</label>
+                        <div class="checkbox">
+                            <label><input name="doc_type" type="checkbox" value="book" checked> Books</label>
                         </div>
-                        <h3>Dashboard</h3>
+                        <div class="checkbox">
+                            <label><input name="doc_type" type="checkbox" value="page" checked> Pages</label>
+                        </div>
                     </div>
-                    <h1>Welcome to Project A</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida viverra massa, nec commodo tortor auctor eu. Nullam at lacus eget eros auctor pellentesque. Vivamus et enim et erat consequat euismod vitae sit amet tellus. Vestibulum tristique sapien et ullamcorper cursus. Nam at odio eu metus dignissim semper.</p>
-                    <p>Quisque a gravida magna. Cras vitae ex lacus. Integer metus felis, ornare a quam eu, dignissim suscipit enim. Sed eget maximus velit, non auctor tellus. Quisque dictum pretium ante vel bibendum. Ut sit amet arcu egestas, mollis mauris in, hendrerit neque. Vivamus nec tellus fermentum, tincidunt ligula in, dignissim nulla. Sed sed sapien dignissim, convallis nunc nec, fermentum nunc. Nullam nec velit vel nisi malesuada tempor.</p>
-                    <p>Suspendisse <strong>potenti</strong>. Proin nec enim neque. Proin cursus felis eget justo pharetra, ac tincidunt ligula posuere. Fusce vitae eros ex. Nullam sollicitudin consectetur suscipit. Ut non ante dui. Sed iaculis purus non tortor ultrices malesuada. Fusce et fringilla metus. Etiam lobortis malesuada eros at pulvinar.</p>
-                    <p>Donec urna massa, dapibus vitae lacus id, elementum ornare quam. Nulla ac ultrices eros. Pellentesque rhoncus efficitur magna, volutpat aliquam est porta vel. Proin sed imperdiet urna. Quisque at eros ligula. Sed blandit leo ac nulla dapibus interdum. Sed ut blandit ex.</p>
-                    <p>Donec at quam quis nisi consectetur condimentum. Donec pretium, est sed convallis laoreet, risus lorem commodo risus, quis consectetur ipsum odio at ligula. Ut fermentum iaculis enim a scelerisque. Proin aliquet risus a condimentum suscipit. Nulla eget augue dapibus, iaculis tortor vitae, interdum mauris. Suspendisse gravida risus sit amet nunc tristique consequat. Integer risus ex, iaculis luctus tristique eget, lacinia in ipsum. Duis volutpat, diam nec bibendum sollicitudin, nunc dui condimentum elit, non bibendum mi ante iaculis tortor. Morbi eget accumsan justo. Sed maximus placerat convallis. Nulla accumsan scelerisque luctus. Vestibulum pellentesque magna vel sagittis aliquet. Quisque semper orci vitae tortor semper interdum. Integer enim diam, aliquet vel euismod maximus, ullamcorper nec dui.</p>
+                    <div class="form-group">
+                        <label for="user">User:</label>
+                        <select name="user" class="form-control">
+                            <option>All</option>
+                            <option value="user1">User1</option>
+                            <option value="user2">User2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-sm-offset-2 history">
+                    <div class="history-entry">
+                        <div class="time">01/18/2016<br>4:31pm</div>
+                        <div class="entry">
+                            <span class="fa fa-plus-square" aria-hidden="true"></span>
+                            username <strong>created</strong> <a href="book-index.html">Book One</a>.
+                        </div>
+                    </div>
+                    <div class="history-entry">
+                        <div class="time">01/18/2016<br>3:50pm</div>
+                        <div class="entry">
+                            <span class="fa fa-pencil-square" aria-hidden="true"></span>
+                            username <strong>edited</strong> <a href="page-view.html">This is a reeeeeeally loooooong page naaaaaaame</a> in <a href="book-index.html">Book Two</a>.
+                        </div>
+                    </div>
+                    <div class="history-entry">
+                        <div class="time">01/17/2016<br>5:08pm</div>
+                        <div class="entry">
+                            <span class="fa fa-pencil-square" aria-hidden="true"></span>
+                            username <strong>edited</strong> <a href="page-view.html">This is a reeeeeeally loooooong page naaaaaaame</a> in <a href="book-index.html">Book Two</a>.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

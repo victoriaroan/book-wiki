@@ -78,6 +78,7 @@ body > .container-fluid {
         right: 0;
         margin: 0;
         padding: 15px 8.33333333%;
+        z-index: 100;
     }
     
     .col-sm-6 .page-header {
@@ -91,6 +92,9 @@ body > .container-fluid {
         padding: 15px;
     }
 }
+
+/* Navigation
+--------------------------------------*/
 
 /* Typography
 --------------------------------------*/
@@ -112,6 +116,15 @@ body > .container-fluid {
 
 .container-fluid .text-muted {
     margin: 20px 0;
+}
+
+/* Projects
+--------------------------------------*/
+.project-menu {
+    float: left;
+    display: inline-block;
+    margin-left: -15px;
+    padding: 15px 10px;
 }
 
 /* Pages
@@ -154,20 +167,49 @@ body > .container-fluid {
     }
 }
 
-/* Activity
+/* History
 --------------------------------------*/
-.activity-entry {
-    margin: 5px 0 5px 10px;
+.history-options {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    background-color: #eee;
+    color: #333;
+    border-right: 1px solid #ddd;
+    padding-top: 68px;
+    display: none;
 }
 
-.activity-entry .fa {
+@media (min-width: 768px) {
+    .history-options {
+        display: block;
+    }
+    
+    .history {
+        padding-top: 68px;
+    }
+}
+
+.history-entry {
+    display: block;
+    clear: both;
+    margin: 5px 0 5px 10px;
+    min-height: 30px;
+}
+
+.history-entry+.history-entry {
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.history-entry .fa {
     display: block;
     float: left;
     margin-top: 2px;
     width: 20px;
 }
 
-.activity-entry .time {
+.history-entry .time {
     color: #777;
     float: left;
     width: 50px;
@@ -175,6 +217,6 @@ body > .container-fluid {
     font-size: 75%;
 }
 
-.activity-entry .entry {
+.history-entry .entry {
     margin-left: 70px;
 }
