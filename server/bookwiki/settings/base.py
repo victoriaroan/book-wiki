@@ -25,6 +25,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'markdownx',
+    'pipeline',
+    'bookwiki',
+    'bookwiki.books',
+    'bookwiki.projects',
 ]
 
 MIDDLEWARE = [
@@ -37,7 +42,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'server.urls'
+ROOT_URLCONF = 'bookwiki.urls'
 
 TEMPLATES = [
     {
@@ -55,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'server.wsgi.application'
+WSGI_APPLICATION = 'bookwiki.wsgi.application'
 
 
 # Database
@@ -101,4 +106,36 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+# STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
+PIPELINE = {
+    'PIPELINE_ENABLED': False,
+    'STYLESHEETS': {
+        'bookwiki': {
+            'source_filenames': (
+                'css/fonts.css',
+                'lib/bootstrap/bootstrap.min.css',
+                'lib/fontawesome/font-awesome.min.css',
+                'markdownx/admin/css/markdownx.min.css',
+                'css/style.css',
+            ),
+            'output_filename': 'css/compiled.css',
+        },
+    },
+    'JAVASCRIPT': {
+        'bookwiki': {
+            'source_filenames': (
+                'markdownx/js/markdownx.min.js'
+                'lib/bootstrap/bootstrap.min.js',
+            ),
+            'output_filename': 'js/compiled.js',
+        },
+    }
+}
+
+# Book-wiki settings
+
+REPOSITORY_ROOT = os.path.join(BASE_DIR, 'repo')
+

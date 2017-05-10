@@ -1,0 +1,2 @@
+django>=1.11,<1.12
+django-pipeline>=1.6,<1.7

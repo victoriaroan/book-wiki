@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block page-title %}Pages{% endblock %}
+{% block page-header %}
+	<h3>Pages</h3>
+{% endblock %}
+
+{% block page-content %}
+	<ul>
+	    {% for page in object_list %}
+	        <li>{{ page.title }}</li>
+	    {% empty %}
+	        <li>No pages yet</li>
+	    {% endfor %}
+	</ul>
+{% endblock %}
