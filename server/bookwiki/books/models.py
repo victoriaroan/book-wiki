@@ -6,7 +6,7 @@ class Book (models.Model):
     slug = models.CharField(max_length=15)
     description = models.TextField()
     date_created = models.DateTimeField()
-    project = models.ForeignKey('projects.Project', models.PROTECT)
+    project = models.ForeignKey('projects.Project', models.PROTECT, default=1)
     
 
 class Page (models.Model):
@@ -14,7 +14,7 @@ class Page (models.Model):
     slug = models.CharField(max_length=25)
     date_created = models.DateTimeField()
     book = models.ForeignKey('Book', models.PROTECT, blank=True, null=True)
-    project = models.ForeignKey('projects.Project', models.PROTECT)
+    project = models.ForeignKey('projects.Project', models.PROTECT, default=1)
     
     @property
     def file_path(self):

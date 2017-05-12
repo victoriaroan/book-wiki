@@ -1,3 +1,7 @@
 venv/
-*.pyc
+.settings/
 server/bookwiki/static/
+server/bookwiki/bookwiki.db
+*.pyc
+*.pydevproject
+*.project
