@@ -1,6 +1,5 @@
 venv/
 .settings/
-server/bookwiki/static/
 server/bookwiki/bookwiki.db
 *.pyc
 *.pydevproject

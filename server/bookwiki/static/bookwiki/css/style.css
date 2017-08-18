@@ -1,0 +1,224 @@
+/* Colors
+--------------------------------------
+c1cc00 (193, 204, 0)
+94993d (148, 153, 61)
+ffd000 (255, 208, 0)
+739aff (115, 154, 255)
+2f84cc (47, 132, 204)
+--------------------------------------*/
+
+/* Fonts
+--------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,400italic);
+
+/* HTML Tags
+--------------------------------------*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* footer height */
+    font-family: Roboto;
+}
+
+code {
+    font-size: 80%;
+}
+
+/* Content
+--------------------------------------*/
+body > .container-fluid {
+    padding: 50px 15px 0;
+}
+
+/* Header/Footer
+--------------------------------------*/
+.navbar {
+    background-color: #c1cc00;
+    border-color: #94993d;
+}
+
+.navbar-brand {
+    color: #333 !important;
+    font-weight: bold;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #94993d;
+    color: #fff;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #F5F5F5;
+}
+
+.footer > .container {
+    padding: inherit 15px;
+}
+
+/* Sub headers */
+.page-header {
+    margin: 0 -15px 15px -15px;
+    padding: 15px;
+    background-color: #444;
+    color: #eee;
+    height: 58px;
+}
+
+@media (min-width: 768px) {
+    .page-header {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 15px 8.33333333%;
+        z-index: 100;
+    }
+    
+    .col-sm-6 .page-header {
+        left: 0;
+        right: 50%;
+        padding: 15px;
+    }
+    .col-sm-offset-6 .page-header {
+        left: 50%;
+        right: 0;
+        padding: 15px;
+    }
+}
+
+/* Navigation
+--------------------------------------*/
+
+/* Typography
+--------------------------------------*/
+.page-header h3,h2 {
+    margin: 0;
+}
+
+.page-header .btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #eee;
+    border: 0;
+}
+
+.page-header .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #eee;
+    border: 0;
+}
+
+.container-fluid .text-muted {
+    margin: 20px 0;
+}
+
+/* Projects
+--------------------------------------*/
+.project-menu {
+    float: left;
+    display: inline-block;
+    margin-left: -15px;
+    padding: 15px 10px;
+}
+
+/* Layouts
+--------------------------------------*/
+.layout-full,
+.page-view,
+.page-edit,
+.page-preview {
+    position: relative;
+    padding: 15px;
+    padding-top: 0;
+}
+
+.page-edit {
+    background-color: #eee;
+}
+    
+.page-edit textarea {
+    margin-top: 10px;
+    height: 500px;
+}
+
+@media (min-width: 768px) {
+    .page-edit {
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        display: block;
+    }
+    
+    .page-edit textarea {
+        position: relative;
+        height: 85%;
+    }
+
+    .layout-full,
+    .page-view,
+    .page-edit,
+    .page-preview {
+        padding-top: 68px;
+    }
+}
+
+/* History
+--------------------------------------*/
+.history-options {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    background-color: #eee;
+    color: #333;
+    border-right: 1px solid #ddd;
+    padding-top: 68px;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .history-options {
+        display: block;
+    }
+    
+    .history {
+        padding-top: 68px;
+    }
+}
+
+.history-entry {
+    display: block;
+    clear: both;
+    margin: 5px 0 5px 10px;
+    min-height: 30px;
+}
+
+.history-entry+.history-entry {
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.history-entry .fa {
+    display: block;
+    float: left;
+    margin-top: 2px;
+    width: 20px;
+}
+
+.history-entry .time {
+    color: #777;
+    float: left;
+    width: 50px;
+    text-align: right;
+    font-size: 75%;
+}
+
+.history-entry .entry {
+    margin-left: 70px;
+}
