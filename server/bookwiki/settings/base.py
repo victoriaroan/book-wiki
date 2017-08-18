@@ -25,9 +25,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap',
     'markdownx',
     'pipeline',
     'bookwiki',
+    'bookwiki.core',
     'bookwiki.books',
     'bookwiki.projects',
 ]
@@ -43,6 +45,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'bookwiki.urls'
+APPEND_SLASH = True
 
 TEMPLATES = [
     {
@@ -73,6 +76,10 @@ DATABASES = {
     }
 }
 
+
+# Authentication
+
+LOGIN_REDIRECT_URL = 'home'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -116,10 +123,10 @@ PIPELINE = {
         'bookwiki': {
             'source_filenames': (
                 'css/fonts.css',
-                'lib/bootstrap/bootstrap.min.css',
-                'lib/fontawesome/font-awesome.min.css',
+                'bootstrap/css/bootstrap.min.css',
+                'fontawesome/css/font-awesome.min.css',
                 'markdownx/admin/css/markdownx.min.css',
-                'css/style.css',
+                'bookwiki/css/style.css',
             ),
             'output_filename': 'css/compiled.css',
         },
@@ -127,8 +134,8 @@ PIPELINE = {
     'JAVASCRIPT': {
         'bookwiki': {
             'source_filenames': (
-                'markdownx/js/markdownx.min.js'
-                'lib/bootstrap/bootstrap.min.js',
+                'markdownx/js/markdownx.min.js',
+                'bootstrap/js/bootstrap.min.js',
             ),
             'output_filename': 'js/compiled.js',
         },

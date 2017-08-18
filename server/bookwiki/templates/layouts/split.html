@@ -1,0 +1,29 @@
+{% extends base_template %}
+
+{% block layout %}
+    <div class="row">
+        <div class="col-sm-6 {{ left_slug }}">
+            <div class="page-header">
+                <div class="pull-right">
+                    {% block left-actions %}{% endblock %}
+                </div>
+                <h3>{% block left-header %}{% endblock %}</h3>
+            </div>
+            <div class="page-content">
+                {% block left-content %}{% endblock %}
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-sm-offset-6 {{ right_slug }}">
+            <div class="page-header">
+                <div class="pull-right">
+                    {% block right-actions %}{% endblock %}
+                </div>
+                <h3>{% block right-header %}{% endblock %}</h3>
+            </div>
+            <div class="page-content">
+                {% block right-content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
