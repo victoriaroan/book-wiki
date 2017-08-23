@@ -1,0 +1,15 @@
+{% extends layout_template %}
+
+{% load bootstrap %}
+
+{% block title %}Profile{% endblock %}
+{% block header %}Edit Profile{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Update</form>
+    </form>
+{% endblock %}

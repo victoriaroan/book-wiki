@@ -79,24 +79,18 @@ DATABASES = {
 
 # Authentication
 
+AUTH_USER_MODEL = 'core.User'
+LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    { 'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', },
+    { 'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator', },
+    { 'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator', },
+    { 'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator', },
 ]
 
 
@@ -113,20 +107,28 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 STATIC_URL = '/static/'
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+]
 # STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
 PIPELINE = {
-    'PIPELINE_ENABLED': False,
     'STYLESHEETS': {
+        'fonts': {
+            'source_filenames': (
+                'css/fonts.css',
+            ),
+            'output_filename': 'css/fonts.css',
+        },
         'bookwiki': {
             'source_filenames': (
                 'css/fonts.css',
-                'bootstrap/css/bootstrap.min.css',
-                'fontawesome/css/font-awesome.min.css',
                 'markdownx/admin/css/markdownx.min.css',
-                'bookwiki/css/style.css',
+                'css/style.css',
             ),
             'output_filename': 'css/compiled.css',
         },
@@ -135,7 +137,6 @@ PIPELINE = {
         'bookwiki': {
             'source_filenames': (
                 'markdownx/js/markdownx.min.js',
-                'bootstrap/js/bootstrap.min.js',
             ),
             'output_filename': 'js/compiled.js',
         },
