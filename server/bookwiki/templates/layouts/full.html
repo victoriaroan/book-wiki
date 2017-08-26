@@ -1,14 +1,11 @@
 {% extends base_template %}
+{% block layout-slug %}full{% endblock %}
 
 {% block layout %}
+    <div id="action-bar">{% block actions %}{% endblock %}</div>
 	<div class="row">
-	    <div class="col-sm-10 col-sm-offset-1 layout-full {{ content_slug }}">
-	        <div class="page-header">
-	            <div class="pull-right">
-	                {% block actions %}{% endblock %}
-	            </div>
-	            <h3>{% block header %}{% endblock %}</h3>
-	        </div>
+	    <div class="col-sm-10 col-sm-offset-1 content {{ content_slug }}">
+            <h1>{% block header %}{% endblock %}</h1>
 	        <div class="page-content">
                 {% block content %}{% endblock %}
             </div>
