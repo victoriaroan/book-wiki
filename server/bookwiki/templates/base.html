@@ -25,7 +25,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">book-wiki</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">book-wiki</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -33,7 +33,7 @@
 	                        <li class="dropdown">
 	                            <a href="#" class="dropdown-toggle" id="user-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ request.user.username }} <span class="caret"></span></a>
 	                            <ul class="dropdown-menu" aria-labelledby="user-menu">
-                                    <li><a href="{% url 'profile' username=request.user.username %}">Profile</a></li>
+                                    <li><a href="{% url 'profile-view' username=request.user.username %}">Profile</a></li>
 	                                <li><a href="{% url 'logout' %}">Logout</a></li>
 	                            </ul>
 	                        </li>

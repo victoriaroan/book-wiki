@@ -121,6 +121,11 @@ code {
     font-weight: bold;
 }
 
+#action-bar>a .fa,
+#action-bar>button .fa {
+    margin-right: 2px;
+}
+
 /* Typography
 --------------------------------------*/
 .page-header h3,h2 {
@@ -157,7 +162,7 @@ body.layout-right-aside .aside {
     background-color: #eee;
     color: #333;
     position: fixed;
-    top: 50px;
+    top: 81px;
     bottom: 0;
 }
 
