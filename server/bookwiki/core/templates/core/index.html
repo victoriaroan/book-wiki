@@ -3,6 +3,10 @@
 {% block title %}Dashboard{% endblock %}
 {% block header %}Dashboard{% endblock %}
 
+{% block actions %}
+    <a href="{% url 'project-create' %}" class="btn btn-link btn-default pull-right"><span class="fa fa-plus-circle"> </span> Create Project</a>
+{% endblock %}
+
 {% block content %}
 
 {% endblock %}

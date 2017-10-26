@@ -2,6 +2,7 @@
 {% block layout-slug %}center{% endblock %}
 
 {% block layout %}
+    {% block prefix %} {% endblock %}
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4 {{ content_slug }}">
             <h1>{% block header %}{% endblock %}</h1>
@@ -10,4 +11,5 @@
             </div>
         </div>
     </div>
+    {% block suffix %} {% endblock %}
 {% endblock %}

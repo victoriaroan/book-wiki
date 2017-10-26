@@ -1,0 +1,27 @@
+{% extends layout_template %}
+
+{% load bootstrap %}
+
+{% block title %}Create Project{% endblock %}
+{% block header %}Create Project{% endblock %}
+
+{% block prefix %}
+    <form action="" method="post">
+        {% csrf_token %}
+{% endblock %}
+
+{% block actions %}
+    <button type="submit" class="btn btn-link btn-primary pull-right"><span class="fa fa-save"></span> Create</button>
+    <a href="{% url 'home' %}" class="btn btn-link btn-default pull-right"><span class="fa fa-ban"> </span> Cancel</a>
+{% endblock %}
+
+{% block content %}
+        {% bootstrap_form form %}
+        <div class="input-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+{% endblock %}
+
+{% block suffix %}
+    </form>
+{% endblock %}

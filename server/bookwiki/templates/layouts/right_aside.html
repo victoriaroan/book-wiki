@@ -2,6 +2,7 @@
 {% block layout-slug %}right-aside{% endblock %}
 
 {% block layout %}
+    {% block prefix %} {% endblock %}
     <div id="action-bar">{% block actions %}{% endblock %}</div>
     <div class="row">
         <div class="col-sm-10 content {{ content_slug }}">
@@ -15,4 +16,5 @@
             {% block aside-content %}{% endblock %}
         </div>
     </div>
+    {% block suffix %} {% endblock %}
 {% endblock %}

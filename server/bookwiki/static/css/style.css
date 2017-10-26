@@ -119,6 +119,7 @@ code {
 #action-bar>a.btn-primary,
 #action-bar>button.btn-primary {
     font-weight: bold;
+    color: #c1cc00;
 }
 
 #action-bar>a .fa,
@@ -146,6 +147,19 @@ code {
 
 .container-fluid .text-muted {
     margin: 20px 0;
+}
+
+/* Forms
+--------------------------------------*/
+.form-group.required label:before {
+    content: '* ';
+}
+.form-group.required label {
+    color: red;
+}
+
+.btn {
+    border-radius: 2px;
 }
 
 /* Layouts

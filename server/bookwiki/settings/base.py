@@ -114,9 +114,11 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'pipeline.finders.PipelineFinder',
 ]
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
 PIPELINE = {
+    'COMPILERS': ('pipeline.compilers.less.LessCompiler',),
+    'LESS_BINARY': os.path.join('C:\\', 'Program Files', 'nodejs', 'node.exe') + ' ' + os.path.join('C:\\', 'Users', 'blackstone', 'AppData', 'Roaming', 'npm', 'node_modules', 'less', 'bin', 'lessc'),
     'STYLESHEETS': {
         'fonts': {
             'source_filenames': (
@@ -129,6 +131,7 @@ PIPELINE = {
                 'css/fonts.css',
                 'markdownx/admin/css/markdownx.min.css',
                 'css/style.css',
+                'css/colors.less',
             ),
             'output_filename': 'css/compiled.css',
         },

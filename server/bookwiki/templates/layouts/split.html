@@ -2,6 +2,7 @@
 {% block layout-slug %}split{% endblock %}
 
 {% block layout %}
+    {% block prefix %} {% endblock %}
     <div id="action-bar">{% block actions %}{% endblock %}</div>
     <div class="row">
         <div class="col-sm-6 {{ left_slug }}">
@@ -18,4 +19,5 @@
             </div>
         </div>
     </div>
+    {% block suffix %} {% endblock %}
 {% endblock %}

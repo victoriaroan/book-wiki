@@ -5,14 +5,20 @@
 {% block title %}Profile{% endblock %}
 {% block header %}Edit Profile{% endblock %}
 
+{% block prefix %}
+    <form action="" method="post">
+        {% csrf_token %}
+{% endblock %}
+
 {% block actions %}
     <button type="submit" class="btn btn-link btn-primary pull-right"><span class="fa fa-save"></span> Save</button>
     <a href="{% url 'profile-view' username=object.username %}" class="btn btn-link btn-default pull-right"><span class="fa fa-ban"> </span> Cancel</a>
 {% endblock %}
 
 {% block content %}
-    <form action="" method="post">
-        {% csrf_token %}
         {% bootstrap_form form %}
+{% endblock %}
+
+{% block suffix %}
     </form>
 {% endblock %}
