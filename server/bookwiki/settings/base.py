@@ -1,4 +1,4 @@
-import os
+from .local import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -118,7 +118,7 @@ STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
 PIPELINE = {
     'COMPILERS': ('pipeline.compilers.less.LessCompiler',),
-    'LESS_BINARY': os.path.join('C:\\', 'Program Files', 'nodejs', 'node.exe') + ' ' + os.path.join('C:\\', 'Users', 'blackstone', 'AppData', 'Roaming', 'npm', 'node_modules', 'less', 'bin', 'lessc'),
+    'LESS_BINARY': LESS_BINARY,
     'STYLESHEETS': {
         'fonts': {
             'source_filenames': (
@@ -128,10 +128,9 @@ PIPELINE = {
         },
         'bookwiki': {
             'source_filenames': (
-                'css/fonts.css',
+                'css/bootstrap/bootstrap.less',
                 'markdownx/admin/css/markdownx.min.css',
-                'css/style.css',
-                'css/colors.less',
+                'css/style.less',
             ),
             'output_filename': 'css/compiled.css',
         },

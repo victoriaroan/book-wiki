@@ -1,0 +1,140 @@
+
+// ----------------------------------------------------------------------------
+// Navbar
+// ----------------------------------------------------------------------------
+.navbar {
+    background-color: @marginal;
+    border: none;
+}
+
+.navbar-brand {
+    color: @text-primary !important;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: @text-secondary;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: @primary;
+    color: @text-light;
+}
+
+
+// ----------------------------------------------------------------------------
+// Action Bar
+// ----------------------------------------------------------------------------
+#action-bar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 100;
+    background-color: @gray;
+    color: #eee;
+    height: 30px;
+    padding: 0 10px;
+}
+
+#action-bar>a,
+#action-bar>button {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    vertical-align: middle;
+    font-size: 13px;
+    color: @text-light;
+}
+
+#action-bar>a:hover,
+#action-bar>button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+#action-bar>a .fa,
+#action-bar>button .fa {
+    margin-right: 2px;
+}
+
+#action-bar>a.btn-primary,
+#action-bar>button.btn-primary {
+    font-weight: bold;
+    color: @marginal;
+}
+
+
+// ----------------------------------------------------------------------------
+// Buttons
+// ----------------------------------------------------------------------------
+
+
+.btn {
+    border-radius: 2px;
+}
+
+
+// ----------------------------------------------------------------------------
+// Projects
+// ----------------------------------------------------------------------------
+.project-box h2 {
+    margin: 0;
+}
+
+// ----------------------------------------------------------------------------
+// History
+// ----------------------------------------------------------------------------
+.history-options {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    background-color: #eee;
+    color: #333;
+    border-right: 1px solid #ddd;
+    padding-top: 68px;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .history-options {
+        display: block;
+    }
+    
+    .history {
+        padding-top: 68px;
+    }
+}
+
+.history-entry {
+    display: block;
+    clear: both;
+    margin: 5px 0 5px 10px;
+    min-height: 30px;
+}
+
+.history-entry+.history-entry {
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.history-entry .fa {
+    display: block;
+    float: left;
+    margin-top: 2px;
+    width: 20px;
+}
+
+.history-entry .time {
+    color: #777;
+    float: left;
+    width: 50px;
+    text-align: right;
+    font-size: 75%;
+}
+
+.history-entry .entry {
+    margin-left: 70px;
+}

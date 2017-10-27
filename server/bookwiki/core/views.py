@@ -2,11 +2,14 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic import DetailView, UpdateView
-from bookwiki.core.generic import LayoutView, LayoutMixin, LayoutTemplates
+from django.views.generic.list import ListView
+from bookwiki.core.generic import LayoutMixin, LayoutTemplates
 from .forms import ProfileForm, LoginForm
+from bookwiki.projects.models import Project
 
-class HomeView (LayoutView):
+class HomeView (LayoutMixin, ListView):
     template_name = 'core/index.html'
+    model = Project
 
 class CoreLoginView (LayoutMixin, LoginView):
     layout_template = LayoutTemplates.CENTER_PANE

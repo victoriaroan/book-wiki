@@ -1,11 +1,29 @@
-@highlight-dark: #5B4835; /* dark horses */
-@highlight: #775C45; /* raw umber */
-@marginal: #7B909E; /* shadow blue */
-@secondary: #527B89; /* wintergreen dream */
-@primary: #244466; /* deep koamaru */
-@primary-text: #333;
+@darkhorses: #5B4835; /* dark horses */
+@rawumber: #775C45; /* raw umber */
+@shadowblue: #7B909E; /* shadow blue */
+@wintergreen: #527B89; /* wintergreen dream */
+@deepkoamaru: #244466; /* deep koamaru */
 
-.navbar {
-    background-color: @secondary;
-    border-color: @primary;
-}
+@darkjungle: #1F2421;
+@myrtlegreen: #216869;
+@shamrock: #49A078;
+@etonblue: #9CC5A1;
+@gainsboro: #DCE1DE;
+
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+
+
+@primary: @myrtlegreen;
+@secondary: @shamrock;
+@marginal: @etonblue;
+
+
+@text-primary: @gray-dark;
+@text-secondary: @darkjungle;
+@text-light: @gainsboro;

@@ -8,5 +8,35 @@
 {% endblock %}
 
 {% block content %}
-
+    <div class="row">
+        {% for project in object_list %}
+            <div class="col-sm-6">
+                <div class="project-box panel panel-default">
+                    <div class="panel-heading">
+                        <div class="pull-right">
+                            <a href="project-settings.html" class="btn btn-default btn-sm"><span class="fa fa-cog" aria-hidden="true"></span><span class="sr-only">Settings</span></a>
+                        </div>
+                        <h2><a href="{% url 'project-detail' project=project.slug %}">{{ project.name }}</a></h2>
+                    </div>
+                    <div class="panel-body">
+                        <p>{{ project.description }}</p>
+                        <strong>Owner:</strong> <a href="user-index.html">username</a><br>
+                        <strong>Contributors:</strong> 3<br>
+                        <strong>Latest Update:</strong><br>
+                        <div class="history-entry">
+                            <div class="time">01/18/2016<br>3:50pm</div>
+                            <div class="entry">
+                                <span class="fa fa-pencil-square" aria-hidden="true"></span>
+                                username <strong>edited</strong> <a href="page-view.html">This is a reeeeeeally loooooong page naaaaaaame</a> in <a href="book-index.html">Book Two</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-sm-12">
+                <p>You don't have access to any projects. <a href="{% url 'project-create' %}">Create a new project?</a></p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

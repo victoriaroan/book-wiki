@@ -116,12 +116,6 @@ code {
     text-decoration: none;
 }
 
-#action-bar>a.btn-primary,
-#action-bar>button.btn-primary {
-    font-weight: bold;
-    color: #c1cc00;
-}
-
 #action-bar>a .fa,
 #action-bar>button .fa {
     margin-right: 2px;
@@ -187,37 +181,10 @@ body.layout-right-aside .aside {
     border-left: 1px solid #ddd;
 }
 
-.layout-full,
-.page-view,
-.page-edit,
-.page-preview {
+.layout-full {
     position: relative;
     padding: 15px;
     padding-top: 0;
-}
-
-.page-edit {
-    background-color: #eee;
-}
-    
-.page-edit textarea {
-    margin-top: 10px;
-    height: 500px;
-}
-
-@media (min-width: 768px) {
-    .page-edit {
-        position: fixed;
-        top: 50px;
-        bottom: 0;
-        left: 0;
-        display: block;
-    }
-    
-    .page-edit textarea {
-        position: relative;
-        height: 85%;
-    }
 }
 
 /* Projects

@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------------------
+// Baseline
+// ----------------------------------------------------------------------------
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-top: 51px;
+    font-family: Roboto;
+}
+
+code {
+    font-size: 80%;
+}
+
+
+// ----------------------------------------------------------------------------
+// Layouts
+// ----------------------------------------------------------------------------
+body.layout-full,
+body.layout-right-aside,
+body.layout-left-aside,
+body.layout-split {
+    margin-top: 80px;
+}
+
+body.layout-left-aside .aside,
+body.layout-right-aside .aside {
+    background-color: #eee;
+    color: #333;
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+}
+
+body.layout-left-aside .aside {
+    border-right: 1px solid #ddd;
+}
+body.layout-right-aside .aside {
+    border-left: 1px solid #ddd;
+}
+
+.layout-full {
+    position: relative;
+    padding: 15px;
+    padding-top: 0;
+}
