@@ -3,8 +3,10 @@ A structured wiki with markdown support.
 
 ## Setting up the dev environment
 
-1. Install nodejs (https://nodejs.org/)
-2. Install git (https://git-scm.com/)
-3. Install SANE stack (`npm install -g sails sane-cli ember-cli`)
-4. (More stuff like mongodb, watchman, phantomjs, ignore for now.)
-5. Clone the project (`git clone https://github.com/victoriaroan/book-wiki.git`)
+1. Install git (https://git-scm.com/), python 3.6.x (https://www.python.org/), and nodejs 8.8.x (https://nodejs.org/)
+2. Install less css via node (http://lesscss.org)
+3. Clone the project (`git clone https://github.com/victoriaroan/book-wiki.git`)
+4. Set up a virtualenv (https://virtualenv.pypa.io/en/stable/)
+5. Install requirements (`pip install -r requirements.txt`)
+6. Migrate database (`python manage.py migrate`)
+7. Run development server (`python manage.py runserver`)
