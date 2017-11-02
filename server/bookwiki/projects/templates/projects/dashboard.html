@@ -13,7 +13,7 @@
             <li><a href="#">Page</a></li>
         </ul>
     </div>
-    <a href="{% url 'project-detail' pid=project.slug %}" class="btn btn-link btn-default pull-right" title="Edit"><span class="fa fa-info"> </span> <span class="hidden-xs">Details</span></a>
+    <a href="{% url 'project-detail' psn=project.psn %}" class="btn btn-link btn-default pull-right" title="Edit"><span class="fa fa-info"> </span> <span class="hidden-xs">Details</span></a>
     <a href="" class="btn btn-link btn-default pull-right" title="History"><span class="fa fa-map-o"> </span> <span class="hidden-xs">History</span></a>
     <a href="" class="btn btn-link btn-default pull-right" title="Settings"><span class="fa fa-gear"> </span> <span class="hidden-xs">Settings</span></a>
 {% endblock %}
