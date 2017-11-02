@@ -1,7 +1,7 @@
 {% extends layout_template %}
 
 {% block title %}Dashboard{% endblock %}
-{% block header %}Dashboard{% endblock %}
+{% block header %}{% endblock %}
 
 {% block actions %}
     <a href="{% url 'project-create' %}" class="btn btn-link btn-default pull-right"><span class="fa fa-plus-circle"> </span> Create Project</a>
@@ -16,7 +16,7 @@
                         <div class="pull-right">
                             <a href="project-settings.html" class="btn btn-default btn-sm"><span class="fa fa-cog" aria-hidden="true"></span><span class="sr-only">Settings</span></a>
                         </div>
-                        <h2><a href="{% url 'project-detail' project=project.slug %}">{{ project.name }}</a></h2>
+                        <h2><a href="{% url 'project-dashboard' pid=project.slug %}">{{ project.name }}</a></h2>
                     </div>
                     <div class="panel-body">
                         <p>{{ project.description }}</p>

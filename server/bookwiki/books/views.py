@@ -1,5 +1,5 @@
-from django.views.generic import ListView
-from .models import Page
+from bookwiki.projects.views import ProjectView
 
-class PageList (ListView):
-    model = Page
+from . import models
+
+

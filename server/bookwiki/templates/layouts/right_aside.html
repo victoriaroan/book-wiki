@@ -6,7 +6,7 @@
     <div id="action-bar">{% block actions %}{% endblock %}</div>
     <div class="row">
         <div class="col-sm-10 content {{ content_slug }}">
-            <h1>{% block header %}{% endblock %}</h1>
+            {% block header %}{% endblock %}
             <div class="page-content">
                 {% block content %}{% endblock %}
             </div>

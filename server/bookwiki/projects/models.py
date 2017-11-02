@@ -5,6 +5,7 @@ class Project (models.Model):
     name = models.CharField(max_length=250)
     slug = models.CharField(max_length=15, blank=False)
     description = models.TextField(null=False, blank=True)
+    index_page = models.ForeignKey('books.Page', models.PROTECT, related_name='+', null=True)
 
     protected = models.BooleanField(editable=False, default=False)
 

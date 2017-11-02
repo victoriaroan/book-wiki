@@ -3,7 +3,7 @@
 {% load bootstrap %}
 
 {% block title %}Profile{% endblock %}
-{% block header %}Edit Profile{% endblock %}
+{% block header %}<h2>Edit {{ object.username }}</h2>{% endblock %}
 
 {% block prefix %}
     <form action="" method="post">
@@ -17,6 +17,9 @@
 
 {% block content %}
         {% bootstrap_form form %}
+        <div class="input-group">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
 {% endblock %}
 
 {% block suffix %}

@@ -1,7 +1,7 @@
 {% extends layout_template %}
 
-{% block title %}Profile{% endblock %}
-{% block header %}View Profile{% endblock %}
+{% block title %}{{ object.username }}'s Profile{% endblock %}
+{% block header %}<h2>{{ object.username }}</h2>{% endblock %}
 
 {% block actions %}
     <a href="{% url 'profile-edit' username=object.username %}" class="btn btn-link btn-primary pull-right"><span class="fa fa-pencil"></span> Edit</a>
