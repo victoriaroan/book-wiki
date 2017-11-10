@@ -1,31 +1,13 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin
-from django.views.generic import CreateView, DetailView, View
-from django.views.generic.base import ContextMixin
-from django.views.generic.edit import ModelFormMixin
+from django.http.response import HttpResponseRedirect
+from django.views.generic import CreateView, DetailView
 
-from bookwiki.core.generic import LayoutMixin, LayoutTemplates
+from bookwiki.books import models as book_models
+from bookwiki.core.generic import LayoutMixin, LayoutTemplates, LayoutView
 
 from .forms import ProjectForm
 from . import models
-
-class ProjectView (ContextMixin, View):
-    """
-    A project-based context view that automatically gets the project slug from
-    the url, retrieves the related project, stores it in the request, and puts
-    the project in the context data. Requires the project slug to be in a "psn"
-    urlconf parameter.
-    """
-    def dispatch(self, request, *args, **kwargs):
-        # This will raise a 404 if the project doesn't exist or the url doesn't have a psn.
-        request.project = models.Project.objects.get(slug=kwargs.get('psn', None))
-        return View.dispatch(self, request, *args, **kwargs)
-
-    def get_context_data(self, **kwargs):
-        context = ContextMixin.get_context_data(self, **kwargs)
-        context.update({
-            'project': self.request.project,
-        })
-        return context
+from django.urls.base import reverse
 
 class ProjectCreateView (PermissionRequiredMixin, LayoutMixin, CreateView):
     layout_template = LayoutTemplates.FULL_PANE
@@ -39,13 +21,24 @@ class ProjectCreateView (PermissionRequiredMixin, LayoutMixin, CreateView):
 #         can_edit = PermissionRequiredMixin.has_permission(self)
 #         return can_edit or self.request.user.pk == self.get_object()
 
+    def form_valid(self, form):
+        self.object = form.save()
+        # Create the default index page.
+        self.object.index_page = book_models.Page.objects.create(
+            title='Welcome to book-wiki!',
+            project=self.object,
+            content="**This is your project's index page.** You can edit it by clicking on the edit button in the top right. You can change what shows up on your project dashboard by editing the project settings."
+        )
+        self.object.save()
+        return HttpResponseRedirect(self.get_success_url())
+
 class ProjectDetailView (PermissionRequiredMixin, LayoutMixin, DetailView):
     model = models.Project
     slug_field = 'psn'
     slug_url_kwarg = 'psn'
     permission_required = 'projects.can_view'
 
-class ProjectDashboardView (LayoutMixin, ProjectView):
+class ProjectDashboardView (LayoutView):
     model = models.Project
     slug_field = 'psn'
     slug_url_kwarg = 'psn'

@@ -29,7 +29,9 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="">Project Name</a></li>
+                        {% if request.project %}
+                            <li><a href="{% url 'project-dashboard' psn=request.project.psn %}">{{ request.project.name }}</a></li>
+                        {% endif %}
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {% if request.user.is_authenticated %}

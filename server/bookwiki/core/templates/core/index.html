@@ -4,7 +4,7 @@
 {% block header %}{% endblock %}
 
 {% block actions %}
-    <a href="{% url 'project-create' %}" class="btn btn-link btn-default pull-right"><span class="fa fa-plus-circle"> </span> Create Project</a>
+    <a href="{% url 'project-create' %}" class="btn btn-link btn-default pull-right" title="New Project"><span class="fa fa-plus-circle"> </span> <span class="hidden-xs">New Project</span></a>
 {% endblock %}
 
 {% block content %}

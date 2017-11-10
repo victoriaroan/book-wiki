@@ -1,0 +1,12 @@
+{% extends layout_template %}
+
+{% block title %}{{ object.name }}{% endblock %}
+{% block header %}<h2>{{ object.title }}</h2>{% endblock %}
+
+{% block actions %}
+    <a href="{% url 'page-edit' psn=object.project.psn slug=object.slug %}" class="btn btn-link btn-default pull-right"><span class="fa fa-edit"> </span> Edit</a>
+{% endblock %}
+
+{% block content %}
+    {{ object.formatted_content|safe }}
+{% endblock %}

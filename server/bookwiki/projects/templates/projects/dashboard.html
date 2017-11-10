@@ -1,7 +1,7 @@
 {% extends layout_template %}
 
-{% block title %}{{ project.name }}{% endblock %}
-{% block header %}<h1>{{ project.name }}</h1>{% endblock %}
+{% block title %}{{ request.project.name }}{% endblock %}
+{% block header %}<h1>{{ request.project.name }}</h1>{% endblock %}
 
 
 {% block actions %}
@@ -10,15 +10,20 @@
             <span class="fa fa-plus"></span> <span class="hidden-xs">Add</span> <span class="caret"></span></button>
         <ul class="dropdown-menu" aria-labelledby="project-add-menu">
             <li><a href="#">Book</a></li>
-            <li><a href="#">Page</a></li>
+            <li><a href="{% url 'page-create' psn=request.project.psn %}">Page</a></li>
         </ul>
     </div>
-    <a href="{% url 'project-detail' psn=project.psn %}" class="btn btn-link btn-default pull-right" title="Edit"><span class="fa fa-info"> </span> <span class="hidden-xs">Details</span></a>
+    {% if request.project.index_page %}
+        <a href="{% url 'page-edit' psn=request.project.psn slug=request.project.index_page.slug %}" class="btn btn-link btn-default pull-right" title="Edit Index"><span class="fa fa-edit"> </span> <span class="hidden-xs">Edit Index</span></a>
+    {% endif %}
+    <a href="{% url 'project-detail' psn=request.project.psn %}" class="btn btn-link btn-default pull-right" title="Edit"><span class="fa fa-info"> </span> <span class="hidden-xs">Details</span></a>
     <a href="" class="btn btn-link btn-default pull-right" title="History"><span class="fa fa-map-o"> </span> <span class="hidden-xs">History</span></a>
     <a href="" class="btn btn-link btn-default pull-right" title="Settings"><span class="fa fa-gear"> </span> <span class="hidden-xs">Settings</span></a>
 {% endblock %}
 
 {% block content %}
-
+    {% if request.project.index_page %}
+        {{ request.project.index_page.content }}
+    {% endif %}
 {% endblock %}
 
