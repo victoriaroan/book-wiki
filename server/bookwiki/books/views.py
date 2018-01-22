@@ -3,7 +3,7 @@ from django.http.response import HttpResponseRedirect
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView
 
-from bookwiki.core.generic import LayoutMixin
+from bookwiki.core.generic import LayoutMixin, LayoutTemplates
 
 from . import models
 from .forms import PageForm
@@ -25,6 +25,7 @@ class PageCreateView (PermissionRequiredMixin, LayoutMixin, CreateView):
         return HttpResponseRedirect(self.get_success_url())
 
 class PageEditView (PermissionRequiredMixin, LayoutMixin, UpdateView):
+    template_name_suffix = '_edit'
     model = models.Page
     form_class = PageForm
     slug_field = 'id'

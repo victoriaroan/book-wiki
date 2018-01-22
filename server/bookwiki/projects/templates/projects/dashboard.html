@@ -23,7 +23,7 @@
 
 {% block content %}
     {% if request.project.index_page %}
-        {{ request.project.index_page.content }}
+        {{ request.project.index_page.formatted_content|safe }}
     {% endif %}
 {% endblock %}
 

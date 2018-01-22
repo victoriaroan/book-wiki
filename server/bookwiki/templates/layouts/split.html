@@ -5,6 +5,9 @@
     {% block prefix %} {% endblock %}
     <div id="action-bar">{% block actions %}{% endblock %}</div>
     <div class="row">
+        <div class="col-xs-12">{% block header %} {% endblock %}</div>
+    </div>
+    <div class="row">
         <div class="col-sm-6 {{ left_slug }}">
             {% block left-header %}{% endblock %}
             <div class="page-content">
