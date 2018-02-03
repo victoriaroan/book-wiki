@@ -14,3 +14,7 @@ class ProjectMiddleware(object):
         # Try to get psn from url and set request.project.
         psn = view_kwargs.get('psn', None)
         request.project = models.Project.objects.get(psn=psn) if psn else None
+
+        # Try to get bsn from url and set request.book.
+        bsn = view_kwargs.get('bsn', None)
+        request.book = models.Book.objects.get(bsn=bsn) if bsn else None

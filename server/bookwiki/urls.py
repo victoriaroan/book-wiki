@@ -7,5 +7,4 @@ urlpatterns = [
 
     url(r'^', include('bookwiki.core.urls')),
     url(r'^', include('bookwiki.projects.urls')),
-    url(r'^', include('bookwiki.books.urls')),
 ]

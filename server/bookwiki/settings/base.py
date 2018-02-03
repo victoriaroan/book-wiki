@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'pipeline',
     'bookwiki',
     'bookwiki.core',
-    'bookwiki.books',
     'bookwiki.projects',
 ]
 
